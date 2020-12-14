@@ -1,0 +1,20 @@
+<html>
+<head>
+	<script type="text/javascript">
+	function isNumber(num) {
+			return /^\d+$/.test(num)
+		}
+		
+	function sendMessage() {
+		var phoneNumber = prompt("Please enter the phone number including country code (don't enter any symbol like +", "e.g. 919999999999");
+		
+		if(phoneNumber != null && isNumber(phoneNumber)) {
+			window.open("https://wa.me/" + phoneNumber);
+		} else {
+			alert("Please input numeric values only!")
+		}
+	}
+	</script>
+</head>
+<body onload="sendMessage()"> </body>
+</html>
